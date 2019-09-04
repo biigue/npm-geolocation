@@ -3,7 +3,6 @@ class GeolocationPhone {
   BRAND = "";
   WPP = "";
 
-
   constructor(url, brand) {
     this.API_URL = url;
     this.BRAND = brand;
@@ -31,17 +30,13 @@ class GeolocationPhone {
     return formated;
   }
 
-  // @TODO criar algo
   setPhone(response) {
     const campanha = true; 
-    //header
-    $('.header__phone').text(response[campanha ? transform(phone_track) : transform(phone)]); //phone transform
-    $('.header__phone_link').attr("href", 'tel:'+response[campanha ? transform(phone_track) : transform(phone)]); //ptl
+    $('.formated_phone').text(this.transform(response[campanha ? 'phone_track' : 'phone']));
+    $('.link_phone').attr("href", 'tel:'+response[campanha ? 'phone_track' : 'phone']);
     //wpp
     this.WPP = response.whatsapp;
   }
-
-
 
   getWhats(){
     return this.wpp;
@@ -58,7 +53,8 @@ class GeolocationPhone {
           },
           body: JSON.stringify(body)
         })
-          .then(this.setPhone)
+          .then(response => response.json())
+          .then(data => this.setPhone(data))
           .catch(function(err) {
             console.error(err);
           }); // response status !== 200
