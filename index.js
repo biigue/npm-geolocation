@@ -36,11 +36,13 @@ class GeolocationPhone {
     const campanha = true; 
     //header
     $('.header__phone').text(response[campanha ? transform(phone_track) : transform(phone)]); //phone transform
-    $('.header__phone').attr("href", 'tel:'+response[campanha ? transform(phone_track) : transform(phone)]); //ptl
+    $('.header__phone_link').attr("href", 'tel:'+response[campanha ? transform(phone_track) : transform(phone)]); //ptl
     //wpp
-    this.WPP = responde.whatsapp;
-
+    this.WPP = response.whatsapp;
   }
+
+
+
   getWhats(){
     return this.wpp;
   }
