@@ -1,4 +1,4 @@
-class GeolocationInfos {
+export class GeolocationInfos {
 
   /**
    * 

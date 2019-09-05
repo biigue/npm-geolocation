@@ -1,6 +1,9 @@
 # npm-geolocation
 ## This repository implements the solution for taking phones from api.
 
+### 0. Depences
+    $ npm i -D jquery
+
 ### 1. How to import
 1. Use in gulp
 
@@ -19,10 +22,10 @@ gulp.task("geolocation", function () {
 1. Instance new object: `This change the .header__phone for the formated Phone and .header__phone_link for 'tel:number'.`
 ```javascript
 const url = '...';
-const geolocation = new GeolocationPhone(url, 'name');
+const geolocation = new GeolocationInfos(url, 'name');
 ```
 
 2. If you need the whatsapp number use:
 ```javascript
-const whatsapp = geolocation.getWhats();
+const whatsapp = geolocation.whatsapp;
 ```
