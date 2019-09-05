@@ -1,0 +1,14 @@
+{
+    "undef": false,
+    "unused": false,
+    "curly": true,
+    "eqeqeq": true,
+    "freeze": true,
+    "maxparams": 3,
+    "browser": true,
+    "node": true,
+    "devel": false,
+    "esversion": 9,
+    "sub": true,
+    "quotmark": "single"
+  }

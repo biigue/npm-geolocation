@@ -1,15 +1,23 @@
 {
   "name": "geolocation-infos",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint .",
+    "build": "npm run test && gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/biigue/npm-geolocation"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "biigue",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-rename": "^1.4.0",
+    "jshint": "^2.10.2"
+  }
 }
